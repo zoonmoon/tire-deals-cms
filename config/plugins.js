@@ -20,7 +20,8 @@ const deniedExecutableTypes = [
   'application/x-mach-binary',
 ];
 
-module.exports = () => ({
+
+module.exports = ({ env }) => ({
   'users-permissions': {
     config: {
       jwtManagement: 'refresh',
@@ -29,12 +30,42 @@ module.exports = () => ({
       },
     },
   },
+
+
+
+  // upload: {
+  //   config: {
+  //     security: {
+  //       allowedTypes: allowedMediaTypes,
+  //       deniedTypes: deniedExecutableTypes,
+  //     },
+  //   },
+  // },
+
+
   upload: {
     config: {
-      security: {
-        allowedTypes: allowedMediaTypes,
-        deniedTypes: deniedExecutableTypes,
+      provider: "@strapi/provider-upload-aws-s3",
+      providerOptions: {
+        baseUrl: env("DO_SPACE_BASE_URL"),
+        s3Options: {
+          credentials: {
+            accessKeyId: env("DO_SPACES_ACCESS_KEY_ID"),
+            secretAccessKey: env("DO_SPACES_ACCESS_KEY_SECRET"),
+          },
+          endpoint: env("DO_SPACE_ENDPOINT"),
+          region: env("DO_SPACE_REGION"),
+          forcePathStyle: false,
+        },
+        params: {
+          Bucket: env("DO_SPACE_BUCKET"),
+        },
       },
     },
   },
+
+
+
+
+
 });
