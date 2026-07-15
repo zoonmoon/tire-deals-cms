@@ -22,7 +22,11 @@ export interface SharedHero extends Struct.ComponentSchema {
   info: {
     displayName: 'Hero ';
   };
-  attributes: {};
+  attributes: {
+    AutoPlay: Schema.Attribute.Boolean;
+    HeroSlide: Schema.Attribute.Component<'hero-slide.hero-slide', true>;
+    ShowPagination: Schema.Attribute.Boolean;
+  };
 }
 
 declare module '@strapi/strapi' {
