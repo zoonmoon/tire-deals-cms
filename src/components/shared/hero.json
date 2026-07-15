@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_shared_hero_s",
+  "info": {
+    "displayName": "Hero "
+  },
+  "options": {},
+  "attributes": {
+    "HeroSlide": {
+      "type": "component",
+      "component": "hero-slide.hero-slide",
+      "repeatable": true
+    },
+    "AutoPlay": {
+      "type": "boolean"
+    },
+    "ShowPagination": {
+      "type": "boolean"
+    }
+  },
+  "config": {}
+}
