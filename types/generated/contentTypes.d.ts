@@ -444,7 +444,7 @@ export interface AdminUser extends Struct.CollectionTypeSchema {
 export interface ApiAuthorAuthor extends Struct.CollectionTypeSchema {
   collectionName: 'authors';
   info: {
-    displayName: 'Author';
+    displayName: 'Blog Author';
     pluralName: 'authors';
     singularName: 'author';
   };
@@ -518,7 +518,7 @@ export interface ApiBlogPostBlogPost extends Struct.CollectionTypeSchema {
 export interface ApiCategoryCategory extends Struct.CollectionTypeSchema {
   collectionName: 'categories';
   info: {
-    displayName: 'Category';
+    displayName: 'Blog Category';
     pluralName: 'categories';
     singularName: 'category';
   };
@@ -573,7 +573,7 @@ export interface ApiHomeHome extends Struct.SingleTypeSchema {
 export interface ApiTagTag extends Struct.CollectionTypeSchema {
   collectionName: 'tags';
   info: {
-    displayName: 'Tag';
+    displayName: 'Blog Tag';
     pluralName: 'tags';
     singularName: 'tag';
   };
