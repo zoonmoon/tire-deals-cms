@@ -25,6 +25,16 @@
         "audios"
       ]
     },
+    "Tags": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::tag.tag"
+    },
+    "Category": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::category.category"
+    },
     "MetaTitle": {
       "type": "string",
       "maxLength": 60
@@ -35,16 +45,6 @@
     },
     "Excerpt": {
       "type": "text"
-    },
-    "Category": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::category.category"
-    },
-    "Tags": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::tag.tag"
     },
     "Content": {
       "type": "blocks"
