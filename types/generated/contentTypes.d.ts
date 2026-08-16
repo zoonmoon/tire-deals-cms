@@ -481,6 +481,7 @@ export interface ApiBlogPostBlogPost extends Struct.CollectionTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
+    Author: Schema.Attribute.Relation<'oneToOne', 'api::author.author'>;
     Category: Schema.Attribute.Relation<'oneToOne', 'api::category.category'>;
     Content: Schema.Attribute.Blocks;
     createdAt: Schema.Attribute.DateTime;
@@ -505,6 +506,7 @@ export interface ApiBlogPostBlogPost extends Struct.CollectionTypeSchema {
         maxLength: 60;
       }>;
     publishedAt: Schema.Attribute.DateTime;
+    slug: Schema.Attribute.UID<'Title'>;
     Tags: Schema.Attribute.Relation<'oneToMany', 'api::tag.tag'>;
     Title: Schema.Attribute.String & Schema.Attribute.Required;
     updatedAt: Schema.Attribute.DateTime;
