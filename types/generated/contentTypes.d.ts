@@ -506,7 +506,7 @@ export interface ApiBlogPostBlogPost extends Struct.CollectionTypeSchema {
         maxLength: 60;
       }>;
     publishedAt: Schema.Attribute.DateTime;
-    slug: Schema.Attribute.UID<'Title'>;
+    slug: Schema.Attribute.UID<'Title'> & Schema.Attribute.Required;
     Tags: Schema.Attribute.Relation<'oneToMany', 'api::tag.tag'>;
     Title: Schema.Attribute.String & Schema.Attribute.Required;
     updatedAt: Schema.Attribute.DateTime;
