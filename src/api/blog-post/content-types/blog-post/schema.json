@@ -25,21 +25,29 @@
         "audios"
       ]
     },
+    "MetaTitle": {
+      "type": "string",
+      "maxLength": 60
+    },
+    "MetaDescription": {
+      "type": "string",
+      "maxLength": 160
+    },
     "Excerpt": {
       "type": "text"
     },
-    "Content": {
-      "type": "blocks"
-    },
-    "category": {
+    "Category": {
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::category.category"
     },
-    "tags": {
+    "Tags": {
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::tag.tag"
+    },
+    "Content": {
+      "type": "blocks"
     }
   }
 }
