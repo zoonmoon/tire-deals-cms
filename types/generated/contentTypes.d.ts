@@ -481,6 +481,13 @@ export interface ApiBlogPostBlogPost extends Struct.CollectionTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
+    AdvancedContentEdit: Schema.Attribute.JSON &
+      Schema.Attribute.CustomField<
+        'plugin::better-blocks.better-blocks',
+        {
+          detailsStyle: 'github';
+        }
+      >;
     Author: Schema.Attribute.Relation<'oneToOne', 'api::author.author'>;
     Category: Schema.Attribute.Relation<'oneToOne', 'api::category.category'>;
     Content: Schema.Attribute.Blocks;

@@ -32,6 +32,11 @@ module.exports = ({ env }) => ({
   },
 
 
+  'better-blocks': {
+    enabled: true,
+  },
+
+
 
   // upload: {
   //   config: {

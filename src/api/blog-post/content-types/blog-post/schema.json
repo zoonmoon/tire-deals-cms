@@ -58,6 +58,13 @@
       "type": "uid",
       "targetField": "Title",
       "required": true
+    },
+    "AdvancedContent": {
+      "type": "customField",
+      "customField": "plugin::better-blocks.better-blocks",
+      "options": {
+        "detailsStyle": "github"
+      }
     }
   }
 }
