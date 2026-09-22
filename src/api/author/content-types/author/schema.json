@@ -21,6 +21,9 @@
       "allowedTypes": [
         "images"
       ]
+    },
+    "Role": {
+      "type": "string"
     }
   }
 }
